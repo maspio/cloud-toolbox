@@ -14,7 +14,6 @@ docker run -ti --rm \
     -v ~/.gitconfig:/root/.gitconfig \
     -v $TOOLBOX_DIR/.autoexec.sh:/root/.autoexec.sh \
     -v ~/.aws:/root/.aws \
-    -v ~/.azure:/root/.azure \
     -v ~/ca-certificates:/usr/local/share/ca-certificates/extra \
     -v /var/run/docker.sock:/var/run/docker.sock \
     --env-file <(env | grep proxy) \
