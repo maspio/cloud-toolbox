@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 TOOLBOX_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
-IMAGE_TAG="latest"
+IMAGE_TAG="project"
 
 docker run -ti --rm \
     -v ~/.kube:/root/.kube \
@@ -18,4 +18,4 @@ docker run -ti --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
     --env-file <(env | grep proxy) \
     ksandermann/cloud-toolbox:$IMAGE_TAG \
-    /bin/zsh
+    /bin/bash
